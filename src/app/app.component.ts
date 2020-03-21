@@ -7,17 +7,21 @@ import { CoronaService } from '../app/corona.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'corona-app';
 
-  lista: Array<any>;
+  confirmed: 0;
+  deaths: 0;
+  recovered: 0;
 
   constructor(private coronaService: CoronaService){ }
 
   ngOnInit(){
-    this.listar();
+    this.coronaService.listar().subscribe(dados => this.exibirDados (dados));
   }
 
-  listar(){
-    this.coronaService.listar().subscribe(dados => this.lista = dados);
+
+  exibirDados(dados){
+    this.confirmed = dados.location.latest.confirmed;
+    this.deaths = dados.location.latest.deaths;
+    this.recovered = dados.location.latest.recovered;
   }
 }

@@ -1,11 +1,9 @@
-body{
-    margin: 0;
-    background-color: aqua;
-}
 
 h1{
-    color: black;
+    color: white;
     font-family: 'Muli', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -24,8 +22,9 @@ h1{
 	margin: 5px;
 	background:#f7f7f7;
 	text-align: center;
-    font-size: 1.25em;
+    font-size: 1.5em;
     color: black;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 

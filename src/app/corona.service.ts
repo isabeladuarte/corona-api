@@ -11,8 +11,6 @@ export class CoronaService {
   constructor(private http: HttpClient) { }
 
   listar(){
-    let data = this.http.get<any[]>(`${this.Url}`);
-    console.log(data);
-    return data;
+    return this.http.get<any[]>(`${this.Url}`);
   }
 }

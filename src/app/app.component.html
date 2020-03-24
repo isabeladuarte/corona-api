@@ -3,9 +3,9 @@
 
 <h1>Covid-19</h1>
 
-<div class="box-center">
-  <label for="">Country: </label>
-  <select (change)="onChange($event.target.value)">
+<div class="box-centerr">
+  <select (change)="onChange($event.target.value)"> 
+    <option>Country</option>
     <option *ngFor="let location of locations" [value]="location.id">
       {{location.country + " " + location.province}}</option>
   </select>
@@ -27,5 +27,7 @@
     <p>{{recovered}}</p>
   </div>
 
-
 </div>
+
+
+

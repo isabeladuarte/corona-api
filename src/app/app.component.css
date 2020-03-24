@@ -8,9 +8,11 @@ h1{
 }
 
 .box-center{
+    margin-top: 10x;
     background-color: #ffffff;
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 600px;
+    height: 180px;
+    margin: 30px auto;
 	display: flex;
 	border: 1px solid #ccc;
     top: 50%;
@@ -27,7 +29,20 @@ h1{
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-label{
+
+select{
+    height: 40px;
+    background-color: #ffffff;
+    max-width: 650px;
+    margin: 0 auto;
+	display: flex;
+	border: 1px solid #ccc;
+    top: 50%;
+    left: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+option{
     font-size: 15px;
 }
 

@@ -8,6 +8,7 @@ import { CoronaService } from '../app/corona.service';
 })
 export class AppComponent implements OnInit {
 
+  reset: false;
   locations: [];
   id: 0;
   confirmed: 0;
@@ -33,4 +34,5 @@ export class AppComponent implements OnInit {
   onChange(id){
     this.coronaService.buscar(id).subscribe(dados => this.exibirDados(dados));
   }
+
 }

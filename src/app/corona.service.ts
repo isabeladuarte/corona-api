@@ -6,9 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CoronaService {
 
-  Url = 'https://coronavirus-tracker-api.herokuapp.com/v2/locations/35';
+  Url = 'https://coronavirus-tracker-api.herokuapp.com/v2/locations';
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
+
+  buscar(id){
+    return this.http.get<any[]>(`${this.Url}/${id}`);
+  }
 
   listar(){
     return this.http.get<any[]>(`${this.Url}`);

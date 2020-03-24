@@ -27,5 +27,7 @@ h1{
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-
+label{
+    font-size: 15px;
+}
 

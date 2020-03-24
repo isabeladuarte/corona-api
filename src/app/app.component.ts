@@ -8,7 +8,7 @@ import { CoronaService } from '../app/corona.service';
 })
 export class AppComponent implements OnInit {
 
-  location: [];
+  locations: [];
   id: 0;
   confirmed: 0;
   deaths: 0;
@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
   constructor(private coronaService: CoronaService){ }
 
   ngOnInit(){
-    this.coronaService.buscar(this.id).subscribe(dados => this.exibirDados(dados));
     this.coronaService.listar().subscribe(dados => this.exibirPaises(dados));
   }
 
@@ -28,6 +27,10 @@ export class AppComponent implements OnInit {
   }
 
   exibirPaises(dados){
-    this.location = dados.locations;
+    this.locations = dados.locations;
+  }
+
+  onChange(id){
+    this.coronaService.buscar(id).subscribe(dados => this.exibirDados(dados));
   }
 }

@@ -3,21 +3,11 @@
 
 <h1>Covid-19</h1>
 
-<!--<form [formGroup]="selectedForm">
-  <label for="">Country:</label>
-  <select formControlName="location">
-    <option [value]="location.id" **ngFor="let location of locations">{{
-      location.country
-    }}</option>
-  </select>
-</form> -->
-
 <div class="box-center">
-  <label for="">Country:</label>
-  <select **ngFor="let location of locations">
-    <option [value]="location.id">{{
-      location.country
-    }}</option>
+  <label for="">Country: </label>
+  <select (change)="onChange($event.target.value)">
+    <option *ngFor="let location of locations" [value]="location.id">
+      {{location.country + " " + location.province}}</option>
   </select>
 </div>
 
